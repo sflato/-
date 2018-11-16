@@ -65,9 +65,9 @@ function listenForClicks() {
      * Get the active tab,
      * then call "beastify()" or "reset()" as appropriate.
      */
-    if (e.target.classList.contains("beast")) {
+    if (e.target.classList.contains("on")) {
       browser.tabs.query({active: true, currentWindow: true})
-        .then(beastify)
+        .then(popup)
         .catch(reportError);
     }
     else if (e.target.classList.contains("reset")) {
