@@ -14,7 +14,6 @@
 
     }
   }
-openAllWindows()
   /**
    * Listen for messages from the background script.
    * Call "beastify()" or "reset()".
