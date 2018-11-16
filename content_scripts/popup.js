@@ -1,17 +1,4 @@
-(function() {
 
-  /**
-   * Check and set a global guard variable.
-   * If this content script is injected into the same page again,
-   * it will do nothing next time.
-   */
-  if (window.hasRun) {
-    return;
-  }
-  window.hasRun = true;
-
-//window.screen.width
-//window.screen.height
   function openWindow (url, i){
     let x =  Math.floor((Math.random() * window.screen.width) + 1)
     let y =  Math.floor((Math.random() * window.screen.height) + 1)
@@ -33,12 +20,7 @@ openAllWindows()
    * Call "beastify()" or "reset()".
   */
   browser.runtime.onMessage.addListener((message) => {
-    if (message.command === "beastify") {
-      insertBeast(message.beastURL);
-    } else if (message.command === "reset") {
-      removeExistingBeasts();
+    if (message.command === "popup") {
+      openAllWindows()
     }
   })
-
-
-})
