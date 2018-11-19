@@ -1,4 +1,4 @@
-
+  console.log("ran");
   /**
     * openAllWindows() selects every <a> tag on the webpage
     * links.length can be changed to modify the amount
@@ -31,5 +31,7 @@
   browser.runtime.onMessage.addListener((message) => {
     if (message.command === "popup") {
       openAllWindows()
-    }
+    } /** else (message.command === "popupless"){
+      function()
+    } */
   })

@@ -17,7 +17,7 @@
   "browser_action": {
     "default_icon": "icons/internetexplorer-48.png",
     "default_title": "internetexplorernetexlporenet",
-    "default_popup": "popup/choose_beast.html"
+    "default_popup": "popup/onoffswitch.html"
   },
 
   "web_accessible_resources": [
