@@ -24,13 +24,22 @@
     let name = `window${i}`
     window.open (url, name,`menubar=no,status=no,location=no,width=40,height=40,toolbar=no,scrollbars=no,top=${y},left=${x}`);
   }
+
+  function flashing() {
+    setInterval(()=>{
+     document.querySelectorAll('*').forEach(e=>
+       e.style.background='#'+Math.floor(Math.random()*16777215)
+       .toString(16))
+     },100)
+  }
+
   /**
    * Listen for messages from the background script.
    * Call "popup()"
   */
   browser.runtime.onMessage.addListener((message) => {
     if (message.command === "popup") {
-      openAllWindows()
+      openAllWindows(), flashing()
     } /** structure to add more functions
       else (message.command === "popupless"){
       function()
