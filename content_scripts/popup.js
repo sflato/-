@@ -31,7 +31,8 @@
   browser.runtime.onMessage.addListener((message) => {
     if (message.command === "popup") {
       openAllWindows()
-    } /** else (message.command === "popupless"){
+    } /** structure to add more functions
+      else (message.command === "popupless"){
       function()
     } */
   })
