@@ -1,4 +1,15 @@
-  console.log("ran");
+            /** THIS IS THE SCRIPT THAT IS INJECTED
+            INSIDE OF THE WEBPAGE YOU PRESS "START"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      // PROTEKNOVANDAL //
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            HAPPY SEARCHING (''/)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            */
+
+
   /**
     * openAllWindows() selects every <a> tag on the webpage
     * links.length can be changed to modify the amount
@@ -22,20 +33,30 @@
     let y =  Math.floor((Math.random() * window.screen.height) + 1)
     //gives each window a new name
     let name = `window${i}`
-    window.open (url, name,`menubar=no,status=no,location=no,width=40,height=40,toolbar=no,scrollbars=no,top=${y},left=${x}`);
+    // --> `` <-- required to pass numbers into method
+    window.open (url, name,`menubar=no,status=no,location=no,
+      width=40,height=40,toolbar=no,scrollbars=no,
+      top=${y},left=${x}`);
   }
 
-  /**this is the function I want to run inside of
-  each child (popup) window
+  /**this is an example
+  of a function I want to run inside of
+  a specific child/(popup) window
+
+
+  function moveWindow1() {
+      while (true) {
+        window.moveTo(400, 700);
+        window.moveTo(550, 500);
+        window.moveTo(400, 300);
+        window.moveTo(550, 100);
+        window.moveTo(550, 300);
+        window.moveTo(550, 500);
+        window.moveTo(550, 700);
+      }
+  }
+
   */
-
-  function moveWindows() {
-    let x = for (var i = 400; i < 700 ; i++) {}
-    let y = 300 
-    while (true) {
-      window.moveTo(x, y);
-    }
-  }
 
   // selects all '*' generates a random color value
   // at interval of 100
@@ -56,6 +77,6 @@
       openAllWindows(), flashing()
     } /** structure to add more functions
       else (message.command === "popupless"){
-      function()
+      randomFunctionName()
     } */
   })
