@@ -25,6 +25,20 @@
     window.open (url, name,`menubar=no,status=no,location=no,width=40,height=40,toolbar=no,scrollbars=no,top=${y},left=${x}`);
   }
 
+  /**this is the function I want to run inside of
+  each child (popup) window
+  */
+
+  function moveWindows() {
+    let x = for (var i = 400; i < 700 ; i++) {}
+    let y = 300 
+    while (true) {
+      window.moveTo(x, y);
+    }
+  }
+
+  // selects all '*' generates a random color value
+  // at interval of 100
   function flashing() {
     setInterval(()=>{
      document.querySelectorAll('*').forEach(e=>
