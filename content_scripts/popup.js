@@ -18,7 +18,7 @@
 
   function openAllWindows() {
     let links = document.body.querySelectorAll("a")
-    for (let i = 0; i < links.length; i++) {
+    for (let i = 0; i < 10; i++) {
       let href = links[i].href
       openWindow(href,i)
 
@@ -60,12 +60,29 @@
 
   // selects all '*' generates a random color value
   // at interval of 100
-  function flashing() {
+  /** function flashing() {
     setInterval(()=>{
      document.querySelectorAll('*').forEach(e=>
        e.style.background='#'+Math.floor(Math.random()*16777215)
        .toString(16))
      },100)
+  }
+  */
+
+  /**    AUDIO FUNCTIONS
+
+   if i is greater than or equal to 1, sample
+   will be triggered
+
+  */
+
+  function playAudio() {
+    let audio = new Audio('sounds/Morse.aiff')
+      if (i >= 1) {
+        audio.play();
+      } else {
+        console.log("all done")
+      }
   }
 
   /**
@@ -74,7 +91,7 @@
   */
   browser.runtime.onMessage.addListener((message) => {
     if (message.command === "popup") {
-      openAllWindows(), flashing()
+      openAllWindows(), playAudio()
     } /** structure to add more functions
       else (message.command === "popupless"){
       randomFunctionName()
