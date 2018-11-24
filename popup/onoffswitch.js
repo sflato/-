@@ -1,4 +1,3 @@
-
 function listenForClicks() {
   // 2. runs after script is injected
 

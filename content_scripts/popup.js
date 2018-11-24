@@ -35,7 +35,7 @@
     let name = `window${i}`
     // --> `` <-- required to pass numbers into method
     window.open (url, name,`menubar=no,status=no,location=no,
-      width=40,height=40,toolbar=no,scrollbars=no,
+      width=200,height=150,toolbar=no,scrollbars=no,
       top=${y},left=${x}`);
   }
 
