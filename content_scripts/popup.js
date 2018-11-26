@@ -18,7 +18,7 @@
 
   function openAllWindows() {
     let links = document.body.querySelectorAll("a")
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < links.length; i++) {
       let href = links[i].href
       openWindow(href,i)
 
@@ -110,7 +110,7 @@
   */
   browser.runtime.onMessage.addListener((message) => {
     if (message.command === "popup") {
-      openAllWindows(), playAudio()
+      openAllWindows()
     } /** structure to add more functions
       else (message.command === "popupless"){
       randomFunctionName()
