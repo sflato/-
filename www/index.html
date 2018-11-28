@@ -8,16 +8,23 @@
 
   <body>
 
-    <a href="sounds/Morse.aiff" download>
-    jgf
-  </a>
-
-
   </body>
 
 </html>
 <script language="JavaScript">
-window.open ("1.html", "newWindow1","menubar=no,status=no,location=no,width=432,height=60,toolbar=no,scrollbars=no,top= 188,left= 439");
 
+  window.onclick = openWindows;
+
+  function openWindows() {
+    let w = 400
+    let h = 60
+    //let h = while (true) {
+      //Math.floor((Math.random() * 500) + 1)
+    //}
+    let x = (screen.width/2)-(w/2);
+    let y = (screen.height/2)-(h/2);
+
+    window.open ("1.html", "newWindow1",`menubar=no,status=no,location=no,width=${w},height=${h},toolbar=no,scrollbars=no,top=${y},left=${x}`);
+  }
 
 </script>

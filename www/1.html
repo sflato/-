@@ -5,51 +5,7 @@
     <title></title>
   </head>
   <body>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
-    <a href="download.html" id "downloadlink" >internetnetexplorenet</a>
+
   </body>
 </html>
 <script type="text/javascript">
@@ -57,26 +13,13 @@
 
   window.onclick = openAllWindows;
 
-  function openAllWindows() {
-    let links = document.body.querySelectorAll("a")
-    for (let i = 0; i < 10; i++) {
-      let href = links[i].href
-      openWindow(href,i)
+  function openWindows() {
+    let w = 400
+    let h = 60
+    let x = (screen.width/2)-(w/2);
+    let y = (screen.height/2)-(h/2);
 
-    }
+    window.open ("2.html", "newWindow2",`menubar=no,status=no,location=no,width=${w},height=${h},toolbar=no,scrollbars=no,top=${y},left=${x}`);
   }
 
-    //places each popup window in a random location
-    //inside the bounds of the screen size
-
-  function openWindow (url, i){
-    let x =  Math.floor((Math.random() * window.screen.width) + 1)
-    let y =  Math.floor((Math.random() * window.screen.height) + 1)
-    //gives each window a new name
-    let name = `window${i}`
-    // --> `` <-- required to pass numbers into method
-    window.open (url, name,`menubar=no,status=no,location=no,
-      width=500,height=300,toolbar=no,scrollbars=no,
-      top=${y},left=${x}`);
-  }
 </script>
