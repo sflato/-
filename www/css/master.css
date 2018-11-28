@@ -7,3 +7,19 @@ section {
     max-width: 800px;
     margin: 0 auto;
 }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+img.star {
+    animation-name:            rotate;
+    animation-duration:        5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
