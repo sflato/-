@@ -3,6 +3,6 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   // No tabs or host permissions needed
   console.log('working');
   chrome.tabs.executeScript({
-    file: 'popups.js'
+    file: 'popup.js'
   });
 });
