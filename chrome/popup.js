@@ -16,15 +16,7 @@ HAPPY SEARCHING (''/)
 of popup windows that are opened
 */
 openAllWindows()
-introWindow()
-introWindow(){
-    let w = 400
-    let h = 60
-    let x = (screen.width/2)-(w/2);
-    let y = (screen.height/2)-(h/2);
 
-    window.open ("1.html", "newWindow1",`menubar=no,status=no,location=no,width=${w},height=${h},toolbar=no,scrollbars=no,top=${y},left=${x}`);
-}
 
 function openAllWindows() {
   let links = document.body.querySelectorAll("a")
