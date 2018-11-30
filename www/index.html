@@ -67,11 +67,11 @@
       </style>
   </head>
 <body>
-  <div id="stage" style="background:black;">
+  <div id="stage" style="background:black;" onmouseover="play()">
     <p id="spinner" class="spinner" style="background: red; text-align: center;
       color:white;">yzxuvicyvitxcrxuviixyztrcvuivxczyvtzrtuvcibycxovgycsifdboftv
       yrc.info</p>
-    <img class="star" id="spinner" src="photos/wifi1.jpg" height=200 width=800 onmouseover="play()">
+    <img class="star" id="spinner" src="photos/wifi1.jpg" height=200 width=800>
   </div>
 
   <audio id="audio" src="/sound/netartsample.mp3"loop ></audio>
@@ -83,13 +83,13 @@
 
 <script language="JavaScript">
 
-  window.onclick = openWindows
+  window.onclick = openWindows, play;
 
 
 
   function play(){
      let audio = document.getElementById("audio");
-
+     audio.load()
      audio.play()
   }
 
