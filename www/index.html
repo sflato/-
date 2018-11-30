@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>internetnetexplorenet.netexplorer</title>
-    <link rel="stylesheet" href="/css/master.css">
     <style type="text/css">
-
+      body{
+        background-color: white;
+      }
       /* WebKit and Opera browsers */
       @-webkit-keyframes spinner {
         from { -webkit-transform: rotateY(0deg);    }
@@ -26,11 +27,13 @@
         }
       }
       #stage {
-        margin: 15em auto;
+        margin: 5em auto;
         -webkit-perspective: 1200px;
         -moz-perspective: 1200px;
         -ms-perspective: 1200px;
         perspective: 1200px;
+        box-shadow: 10px 10px 100px blue;
+
       }
       #spinner {
         -webkit-animation-name: spinner;
@@ -50,7 +53,11 @@
       }
       .star{
         display: block;
-    margin: 0 auto;
+        margin: 0 auto;
+      }
+      .bottomanimation{
+        display: block;
+        margin: 0 auto;
       }
       #spinner:hover {
         -webkit-animation-play-state: paused;
@@ -60,15 +67,31 @@
       </style>
   </head>
 <body>
+  <div id="stage" style="background:black;">
+    <p id="spinner" class="spinner" style="background: red; text-align: center;
+      color:white;">yzxuvicyvitxcrxuviixyztrcvuivxczyvtzrtuvcibycxovgycsifdboftv
+      yrc.info</p>
+    <img class="star" id="spinner" src="photos/wifi1.jpg" height=200 width=800 onmouseover="play()">
+  </div>
 
-    <p id="spinner" class="spinner" style="background: red; text-align: center; color: white;">yzxuvicyvitxcrxuviixyztrcvuivxczyvtzrtuvcibycxovgycsifdboftvyrc.info</p>
-      <img class="star" id="spinner" src="photos/wifi1.jpg" height=200 width=800 >
+  <audio id="audio" src="/sound/netartsample.mp3"loop ></audio>
 
+  <img class="bottomanimation" id="spinner" src="photos/wifi1.jpg" height=200
+    width=800 >
 </body>
 </html>
+
 <script language="JavaScript">
 
-  window.onclick = openWindows;
+  window.onclick = openWindows
+
+
+
+  function play(){
+     let audio = document.getElementById("audio");
+
+     audio.play()
+  }
 
   function openWindows() {
     let w = 260
@@ -77,7 +100,7 @@
       //Math.floor((Math.random() * 500) + 1)
     //}
     let x = (screen.width/2)-(w/2);
-    let y = (screen.height/2)-(h/8);
+    let y = (screen.height-350);
 
     window.open ("2.html", "newWindow2",`menubar=no,status=no,location=no,width=${w},height=${h},toolbar=no,scrollbars=no,top=${y},left=${x}`);
   }
