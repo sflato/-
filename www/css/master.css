@@ -8,7 +8,7 @@ section {
     margin: 0 auto;
 }
 
-@keyframes rotate {
+@keyframes star {
   from {
     transform: rotate(0deg);
   }
@@ -18,7 +18,7 @@ section {
 }
 
 img.star {
-    animation-name:            rotate;
+    animation-name:            star;
     animation-duration:        5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
