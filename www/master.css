@@ -1,0 +1,74 @@
+body{
+  background-color: black;
+  text-shadow: 20px 40px  #ff00ff;
+  font-family: cursive;
+  font-size: 5px;
+  color: white;
+}
+.outline{
+  z-index: -1;
+  color: white;
+  border: .5px dotted;
+box-shadow: 5px 10px 10px 4px #ff00ff;
+}
+.dl{
+  text-align: center;
+  padding-top: 1px;
+}
+/* WebKit and Opera browsers */
+@-webkit-keyframes spinner {
+  from { -webkit-transform: rotateY(0deg);    }
+  to   { -webkit-transform: rotateY(-360deg); }
+}
+
+/* all other browsers */
+@keyframes spinner {
+  from {
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -moz-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    transform: rotateY(-360deg);
+  }
+}
+#stage {
+  z-index: 1;
+  margin: 5em auto;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -ms-perspective: 1200px;
+  perspective: 1200px;
+  box-shadow: 10px 10px 100px blue;
+
+}
+#spinner {
+  -webkit-animation-name: spinner;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 2s;
+
+  animation-name: spinner;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.star{
+  display: block;
+  margin: 0 auto;
+}
+.bottomanimation{
+  display: block;
+  margin: 0 auto;
+}
+#spinner:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}

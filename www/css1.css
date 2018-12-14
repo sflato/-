@@ -1,0 +1,41 @@
+.button1{
+  text-align: center;
+  margin-top: 300px;
+}
+.downloadbutton{
+  text-align: center;
+  margin-top: 1px;
+}
+.scrolling {
+  margin: auto;
+  width: 100%;
+  padding: 1px;
+  padding-top: 27px;
+}
+
+  @-webkit-keyframes argh-my-eyes {
+    0%   { background-color: #fff; }
+    49% { background-color: #fff; }
+    50% { background-color: #000; }
+    99% { background-color: #000; }
+    100% { background-color: #fff; }
+  }
+  @-moz-keyframes argh-my-eyes {
+    0%   { background-color: #fff; }
+    49% { background-color: #fff; }
+    50% { background-color: #000; }
+    99% { background-color: #000; }
+    100% { background-color: #fff; }
+  }
+  @keyframes argh-my-eyes {
+    0%   { background-color: #fff; }
+    49% { background-color: #fff; }
+    50% { background-color: #000; }
+    99% { background-color: #000; }
+    100% { background-color: #fff; }
+  }
+  body {
+  -webkit-animation: argh-my-eyes 0.5s infinite;
+  -moz-animation:    argh-my-eyes 0.5s infinite;
+  animation:         argh-my-eyes 0.5s infinite;
+}
